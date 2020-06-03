@@ -5,7 +5,9 @@ class Landing extends Component {
 
 
     render() {
-        return {/* your code here */ }
+        return <div>
+   {this.props.store.filter(s=>(s.hottest==true)).map(f=>(<div>Welcome,{this.props.user}.The hottest item is {f.item} for ${f.price} </div>)) }
+        </div>
 
     }
 }
